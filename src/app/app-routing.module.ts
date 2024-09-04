@@ -20,7 +20,10 @@ const routes: Routes = [
             { path: 'ecommerce', data: { breadcrumb: 'E-Commerce' }, loadChildren: () => import('./demo/components/ecommerce/ecommerce.module').then(m => m.EcommerceModule) },
             { path: 'apps', data: { breadcrumb: 'Apps' }, loadChildren: () => import('./demo/components/apps/apps.module').then(m => m.AppsModule) },
             // System
-            { path: 'docx', data: { breadcrumb: 'Docx' }, loadChildren: () => import('./system/docx/docx.module').then(m => m.DocxModule) }
+            { path: 'docx', data: { breadcrumb: 'Docx' }, loadChildren: () => import('./system/docx/docx.module').then(m => m.DocxModule) },
+
+            // Activos Fijos
+            { path: 'activos-fijos', data: { breadcrumb: 'Activos fijos' }, loadChildren: () => import('./activos-fijos/pages/activos/activos.module').then(m => m.ActivosModule) }
         ]
     },
     { path: 'auth', data: { breadcrumb: 'Auth' }, loadChildren: () => import('./demo/components/auth/auth.module').then(m => m.AuthModule) },
